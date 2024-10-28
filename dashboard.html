@@ -1,0 +1,148 @@
+<!-- dashboard.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard - Spiritual Retreat Planner</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Dashboard</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="dashboard.html" class="active">Dashboard</a></li>
+                <li><a href="profile.html">Profile</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="tabs">
+            <button class="tablink active" onclick="openTab(event, 'Itinerary')">Itinerary Planner</button>
+            <button class="tablink" onclick="openTab(event, 'YogaFlow')">Yoga Flow Builder</button>
+            <button class="tablink" onclick="openTab(event, 'Attendees')">Attendee Management</button>
+            <button class="tablink" onclick="openTab(event, 'Notifications')">Notifications</button>
+        </div>
+
+        <!-- Itinerary Planner Tab -->
+        <div id="Itinerary" class="tabcontent" style="display: none;">
+            <section class="event-customization">
+                <h2>Create Your Itinerary</h2>
+                <div class="event-form">
+                    <input type="text" id="event-name" placeholder="Event Name">
+                    <input type="date" id="event-date">
+                    <input type="time" id="event-time">
+                    <input type="text" id="event-instructor" placeholder="Instructor Name">
+                    <button onclick="addEvent()">Add Event</button>
+                </div>
+                <table id="event-table">
+                    <thead>
+                        <tr>
+                            <th>Event Name</th>
+                            <th>Date & Time</th>
+                            <th>Instructor</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Events will be listed here -->
+                    </tbody>
+                </table>
+                <button onclick="generateGanttChart()">Generate Gantt Chart</button>
+                <div id="gantt-chart-container">
+                    <!-- Gantt chart will be rendered here -->
+                </div>
+                <button onclick="exportGanttChart()">Export Gantt Chart as SVG</button>
+                <button onclick="emailItinerary()">Email Itinerary to Attendees</button>
+            </section>
+        </div>
+
+        <!-- Yoga Flow Builder Tab -->
+        <div id="YogaFlow" class="tabcontent" style="display: none;">
+            <section class="yoga-flow-builder">
+                <h2>Yoga Flow Builder</h2>
+                <div class="flow-summary">
+                    <h3>Your Sequence</h3>
+                    <div class="flow-icons" id="flow-icons">
+                        <!-- Icons for each pose -->
+                    </div>
+                    <button onclick="addSequenceToEvent()">Add Sequence to Event Planner</button>
+                </div>
+                <div class="pose-selection">
+                    <h3>Select Poses</h3>
+                    <div class="poses">
+                        <!-- Pose images will be displayed here -->
+                    </div>
+                </div>
+                <div class="flow-creation">
+                    <h3>Your Flow Details</h3>
+                    <table id="flow-table">
+                        <thead>
+                            <tr>
+                                <th>Pose Image</th>
+                                <th>Pose Name</th>
+                                <th>Custom Name</th>
+                                <th>Duration (min)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Selected poses will appear here -->
+                        </tbody>
+                    </table>
+                    <button onclick="exportFlowSVG()">Export Flow as SVG</button>
+                </div>
+            </section>
+        </div>
+
+        <!-- Attendee Management Tab -->
+        <div id="Attendees" class="tabcontent" style="display: none;">
+            <h2>Attendee Management</h2>
+            <button onclick="addAttendee()">Add Attendee</button>
+            <table id="attendee-table">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Attendees will be listed here -->
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Notifications Tab -->
+        <div id="Notifications" class="tabcontent" style="display: none;">
+            <!-- Notifications Content -->
+            <h2>Notifications</h2>
+            <p>Send updates to your attendees.</p>
+            <!-- Notification form and list -->
+        </div>
+            <!-- ... Existing content ... -->
+
+    <!-- Modal for Event Details -->
+    <div id="event-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button" onclick="closeEventModal()">&times;</span>
+            <div id="event-modal-content">
+                <!-- Event details will be inserted here -->
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+        
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Spiritual Retreat Planner</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

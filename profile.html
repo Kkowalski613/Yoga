@@ -1,0 +1,42 @@
+<!-- profile.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Profile - Spiritual Retreat Planner</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Your Profile</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="profile.html" class="active">Profile</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="profile">
+            <img src="avatar.png" alt="User Avatar" class="avatar" id="profile-photo">
+            <h2 id="user-name">John Doe</h2>
+            <p>Email: <span id="user-email">john.doe@example.com</span></p>
+            <p>Phone: <span id="user-phone">123-456-7890</span></p>
+            <form id="photo-upload-form">
+                <label for="photo-upload">Upload Profile Photo:</label>
+                <input type="file" id="photo-upload" accept="image/*">
+                <button type="button" onclick="uploadProfilePhoto()">Upload</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Spiritual Retreat Planner</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

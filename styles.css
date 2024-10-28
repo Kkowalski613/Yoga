@@ -1,0 +1,238 @@
+/* styles.css */
+
+/* Minimalist and Modern Design */
+
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    color: #333;
+    background-color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #fff;
+    border-bottom: 1px solid #eaeaea;
+    padding: 20px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: -40px;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #0070f3;
+    font-weight: bold;
+}
+
+nav ul li a.active {
+    color: #000;
+    border-bottom: 2px solid #000;
+}
+
+main {
+    padding: 40px;
+}
+
+.tabs {
+    display: flex;
+    border-bottom: 1px solid #eaeaea;
+}
+
+.tablink {
+    padding: 14px 20px;
+    cursor: pointer;
+    background-color: #f9f9f9;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    flex: 1;
+    text-align: center;
+}
+
+.tablink.active {
+    background-color: #fff;
+    border-bottom: 2px solid #0070f3;
+}
+
+.tabcontent {
+    display: none;
+    padding: 20px 0;
+}
+
+.event-customization, .yoga-flow-builder, .profile {
+    margin-bottom: 40px;
+}
+
+.event-form, .flow-summary, .pose-selection, .flow-creation {
+    margin-top: 20px;
+}
+
+.event-form input, .event-form button {
+    padding: 10px;
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+#event-table, #flow-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+#event-table th, #event-table td, #flow-table th, #flow-table td {
+    padding: 10px;
+    border: 1px solid #eaeaea;
+    text-align: left;
+}
+
+#event-table th, #flow-table th {
+    background-color: #f9f9f9;
+}
+
+button {
+    background-color: #0070f3;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    padding: 10px 20px;
+}
+
+button:hover {
+    background-color: #005bb5;
+}
+
+.pose-selection .poses {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.pose {
+    width: 100px;
+    height: 100px;
+    border: 1px solid #eaeaea;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.flow-icons {
+    display: flex;
+    gap: 10px;
+}
+
+.flow-icons .pose-icon {
+    width: 50px;
+    height: 50px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    border-top: 1px solid #eaeaea;
+}
+
+.avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.profile h2 {
+    margin-top: 10px;
+}
+
+.profile p {
+    margin: 5px 0;
+}
+
+#photo-upload-form {
+    margin-top: 20px;
+}
+
+#photo-upload-form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+#photo-upload-form input {
+    margin-bottom: 10px;
+}
+#gantt-chart-container {
+    margin-top: 20px;
+    overflow-x: auto;
+}
+/* Modal styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.5); /* Black w/ opacity */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Adjust as needed */
+}
+
+.close-button {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Update tab text color */
+.tablink {
+    padding: 14px 20px;
+    cursor: pointer;
+    background-color: #f9f9f9;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    flex: 1;
+    text-align: center;
+    color: #000; /* Set text color to black */
+}
+.tablink {
+    padding: 14px 20px;
+    cursor: pointer;
+    background-color: #f9f9f9;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    flex: 1;
+    text-align: center;
+    color: #000; /* Set text color to black */
+}
